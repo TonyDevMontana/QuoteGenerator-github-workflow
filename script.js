@@ -54,3 +54,15 @@ newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 
 getQuotes();
+
+  function updateTimestamp() {
+    // Get the current date and time
+    var currentDate = new Date();
+    // Format the date and time as desired
+    var formattedDate = currentDate.toLocaleString(); // Example format: "4/5/2024, 12:30:45 PM"
+    // Update the content of the element with id "timestamp"
+    document.getElementById("timestamp").textContent = formattedDate;
+  }
+
+  // Call the updateTimestamp function when the page loads
+  window.onload = updateTimestamp;
